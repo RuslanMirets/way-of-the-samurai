@@ -20,6 +20,11 @@ body {
   line-height: 24px;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .app-wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -28,36 +33,4 @@ body {
   grid-template-rows: 70px 1fr;
   grid-template-columns: 2fr 10fr;
   gap: 10px;
-}
-
-.header {
-  grid-area: h;
-  background-color: #a6cef6;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.header img {
-  width: 60px;
-  height: 60px;
-  background: #4E8C9D;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.sidebar {
-  grid-area: s;
-  background-color: #ffadad;
-}
-
-.profile {
-  grid-area: p;
-  background-color: #e5b3e3;
-}
-
-.main-banner img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
 }

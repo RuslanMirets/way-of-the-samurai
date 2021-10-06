@@ -1,0 +1,17 @@
+.sidebar {
+  grid-area: s;
+  background-color: #ffadad;
+}
+
+.item {
+  transition: color .3s ease-in-out;
+}
+
+.active {
+  color: #5c2091;
+  text-decoration: underline;
+}
+
+.item:hover {
+  color: #5c2091;
+}

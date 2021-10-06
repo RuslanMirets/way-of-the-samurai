@@ -1,13 +1,25 @@
+import classes from './Sidebar.module.css';
+
 const Sidebar = () => {
   return (
-    <aside className="sidebar">
+    <aside className={classes.sidebar}>
       <nav>
         <ul>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">Settings</a></li>
+          <li className={classes.item}>
+            <a href="#">Profile</a>
+          </li>
+          <li className={`${classes.item} ${classes.active}`}>
+            <a href="#">Messages</a>
+          </li>
+          <li className={classes.item}>
+            <a href="#">News</a>
+          </li>
+          <li className={classes.item}>
+            <a href="#">Music</a>
+          </li>
+          <li className={classes.item}>
+            <a href="#">Settings</a>
+          </li>
         </ul>
       </nav>
     </aside>
