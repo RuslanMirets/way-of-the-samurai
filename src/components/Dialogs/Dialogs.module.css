@@ -7,7 +7,15 @@
 .dialogsItems {
 }
 
-.dialog.active {
+.dialog a {
+  transition: color .3s ease-in-out;
+}
+
+.dialog a:hover {
+  color: #e00808;
+}
+
+.dialog .active {
   color: #e00808;
 }
 
