@@ -1,15 +1,11 @@
 import classes from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
   return (
     <div>
-      <div className={classes.profileBanner}>
-        <img src="https://w-dog.ru/wallpapers/13/14/465473241668895/derevo-listya-priroda-vetvi.jpg" alt="main"/>
-      </div>
-      <div>
-        ava + desc
-      </div>
+      <ProfileInfo/>
       <MyPosts/>
     </div>
   );
