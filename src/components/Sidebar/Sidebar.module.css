@@ -1,13 +1,18 @@
 .sidebar {
   grid-area: s;
   background-color: #ffadad;
+  padding: 10px;
 }
 
 .item {
   transition: color .3s ease-in-out;
 }
 
-.active {
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.item .active {
   color: #5c2091;
   text-decoration: underline;
 }
