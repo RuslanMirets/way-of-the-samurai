@@ -29,8 +29,13 @@ a {
   width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-areas: 'h h h' 's p p';
+  grid-template-areas: 'h h h' 's c c';
   grid-template-rows: 70px 1fr;
   grid-template-columns: 2fr 10fr;
   gap: 10px;
+}
+
+.app-wrapper-content {
+  grid-area: c;
+  background-color: #e5b3e3;
 }
