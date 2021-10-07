@@ -1,22 +1,6 @@
 import classes from './Dialogs.module.css';
-import {Link} from "react-router-dom";
-
-const DialogItem = (props) => {
-  let path = "/dialogs/" + props.id
-  return (
-    <div className={classes.dialog}>
-      <Link to={path}>
-        {props.name}
-      </Link>
-    </div>
-  );
-}
-
-const Message = (props) => {
-  return (
-    <div className={classes.dialog}>{props.message}</div>
-  );
-}
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
 const Dialogs = () => {
   let dialogs = [
@@ -25,7 +9,6 @@ const Dialogs = () => {
     {id: 3, name: 'Sveta'},
     {id: 4, name: 'Sasha'},
   ]
-
   let messages = [
     {id: 1, message: 'Hello'},
     {id: 2, message: 'Hi'},
