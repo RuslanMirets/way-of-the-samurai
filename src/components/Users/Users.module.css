@@ -6,8 +6,7 @@
 }
 
 .currentPage {
-  font-weight: 700;
-  text-decoration: underline;
+  background-color: #a6cef6;
 }
 
 .pagination {
