@@ -4,3 +4,24 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+.currentPage {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
