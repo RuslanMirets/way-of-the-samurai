@@ -1,34 +1,13 @@
 import classes from "./Users.module.css";
+import axios from "axios";
+import userPhoto from '../../assets/images/avatar.jpg';
 
 const Users = (props) => {
 
   if (props.users.length === 0) {
-    props.setUsers([
-      {
-        id: 1,
-        photoUrl: "https://avatars.mds.yandex.net/i?id=b61ae309ac765194b3db6cc1f508a868-4507914-images-thumbs&n=13&exp=1",
-        followed: true,
-        fullName: "Andrey",
-        status: "I am solder",
-        location: {city: "Prohladniy", country: "Russia"}
-      },
-      {
-        id: 2,
-        photoUrl: "https://avatars.mds.yandex.net/i?id=b61ae309ac765194b3db6cc1f508a868-4507914-images-thumbs&n=13&exp=1",
-        followed: false,
-        fullName: "Sasha",
-        status: "Free man",
-        location: {city: "Minsk", country: "Belarus"}
-      },
-      {
-        id: 3,
-        photoUrl: "https://avatars.mds.yandex.net/i?id=b61ae309ac765194b3db6cc1f508a868-4507914-images-thumbs&n=13&exp=1",
-        followed: false,
-        fullName: "Sveta",
-        status: "So pretty",
-        location: {city: "Kiev", country: "Ukraine"}
-      },
-    ])
+    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+      props.setUsers(response.data.items)
+    });
   }
 
   return (
@@ -37,7 +16,8 @@ const Users = (props) => {
         <div key={user.id}>
           <span>
             <div>
-              <img className={classes.userPhoto} src={user.photoUrl} alt="Avatar"/>
+              <img className={classes.userPhoto} src={user.photos.small != null ? user.photos.small : userPhoto}
+                   alt="Avatar"/>
             </div>
             <div>
               {user.followed ? <button onClick={() => {
@@ -49,12 +29,12 @@ const Users = (props) => {
           </span>
           <span>
             <span>
-              <div>{user.fullName}</div>
+              <div>{user.name}</div>
               <div>{user.status}</div>
             </span>
             <span>
-              <div>{user.location.country}</div>
-              <div>{user.location.city}</div>
+              <div>{"user.location.country"}</div>
+              <div>{"user.location.city"}</div>
             </span>
           </span>
         </div>
