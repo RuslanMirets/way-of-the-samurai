@@ -2,6 +2,7 @@
   grid-area: h;
   background-color: #a6cef6;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
@@ -16,4 +17,8 @@
   background: #4E8C9D;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.loginBlock {
+
 }
