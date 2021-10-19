@@ -1,5 +1,6 @@
 import classes from "./Users.module.css";
 import userPhoto from "../../assets/images/avatar.jpg";
+import {Link} from "react-router-dom";
 
 let Users = (props) => {
 
@@ -25,8 +26,10 @@ let Users = (props) => {
         <div key={user.id}>
           <span>
             <div>
-              <img className={classes.userPhoto} src={user.photos.small != null ? user.photos.small : userPhoto}
-                   alt="Avatar"/>
+              <Link to={'/profile/' + user.id}>
+                <img className={classes.userPhoto} src={user.photos.small != null ? user.photos.small : userPhoto}
+                     alt="Avatar"/>
+              </Link>
             </div>
             <div>
               {user.followed ? <button onClick={() => {

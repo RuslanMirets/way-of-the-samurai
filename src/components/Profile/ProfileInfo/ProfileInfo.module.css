@@ -7,3 +7,15 @@
 .descriptionBlock {
   padding: 10px;
 }
+
+.fullName {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
